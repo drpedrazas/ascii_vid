@@ -44,6 +44,8 @@ def main():
     args = parser.parse_args()
     print("Processing...", end='\r')
     if args.video:
+        if not os.path.isdir("out"):
+            os.mkdir("out")
         if os.path.isdir(args.name + "_frames"):
             shutil.rmtree(args.name + "_frames")
         if os.path.isdir(args.name + "_ascii_frames"):
@@ -57,6 +59,13 @@ def main():
                 converter.to_ascii_vid(args.file_name, args.name, fps=args.fps)
         else:
             converter.to_ascii_vid(args.file_name, args.name, args.cols, args.fps)
+    else:
+        if not os.path.isdir("ascii_images"):
+            os.mkdir("ascii_images")
+        if args.cols is not None:
+            converter.ascii_image(args.file_name, args.name, args.cols)
+        else:
+            converter.ascii_image(args.file_name, args.name, args.cols)
 
 
 if __name__ == '__main__':
