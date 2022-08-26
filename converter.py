@@ -149,15 +149,12 @@ def sum_images(x, y):
 
 
 def ascii_image(imagen, file_name, cols=75, video=False):
-    matrix = list()
     aimg = to_ascii(imagen, cols)
-    for row in aimg:
-        t = [correspondencia[i] for i in row]
-        matrix.append(functools.reduce(lambda x, y: sum_images(x, y), t))
-    defi = list(matrix[0])
-    for i in matrix[1:]:
-        defi += list(i)
-    binary = np.array(defi) > 0
+    matrix = np.concatenate(np.array([correspondencia[i] for i in aimg[0]]), axis=1)
+    for row in aimg[1:]:
+        t = np.concatenate(np.array([correspondencia[i] for i in row]), axis=1)
+        matrix = np.concatenate([matrix, t])
+    binary = matrix > 0
     k = Image.fromarray(binary)
     if video:
         k.save("{}_ascii_frames".format(file_name) + "/" + imagen.split("/")[-1])
