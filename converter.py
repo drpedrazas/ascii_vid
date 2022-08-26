@@ -141,13 +141,6 @@ def to_ascii(file_name, cols=75):
     return aimg
 
 
-def sum_images(x, y):
-    z = list()
-    for i in range(len(y)):
-        z.append(list(x[i]) + list(y[i]))
-    return np.array(z)
-
-
 def ascii_image(imagen, file_name, cols=75, video=False):
     aimg = to_ascii(imagen, cols)
     matrix = np.concatenate(np.array([correspondencia[i] for i in aimg[0]]), axis=1)
