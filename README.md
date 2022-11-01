@@ -25,3 +25,16 @@ optional arguments:
   -fps FPS    fps for your video
 ```
 4. After deciding what you want to do, run your command. If your project is a video, it will be droped inside an "out" directory created automatically in the current working directory. Otherwise, you will find your image in the "ascii_images" folder, again, created in the current working directory.
+
+## Examples:
+
+Suppose we have this image:
+
+If we want to make it into ascii art, we just run:
+
+```
+python3 -cols 100 sawa.jpg sawa_ascii
+```
+We get this:
+
+
