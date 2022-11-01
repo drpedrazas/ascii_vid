@@ -7,9 +7,9 @@ Converting a normal image into ascii art is one of the first projects a would be
 
 1. Clone this repo
 2. Put the video you want to convert in the same directory as ascii.py
-3. Type python3 ascii.py -h to see your options.
+3. Run ``` python3 ascii.py -h ``` to see your options. You should see this:
 ```
-python3 ascii.py
+$ python3 ascii.py -h
 usage: ascii.py [-h] [-cols COLS] [--video] [-fps FPS] file_name name
 
 Converting images and video into ascii art.
