@@ -24,7 +24,7 @@ optional arguments:
   --video     Is your project a video?
   -fps FPS    fps for your video
 ```
-4. After deciding what you want to do, run your command. If your project is a video, it will be droped inside an "out" directory created automatically in the current working directory. Otherwise, you will find your image in the "ascii_images" folder, again, created in the current working directory.
+4. After deciding what you want to do, run your command. If your project is a video, your product will be droped inside an "out" directory created automatically in the current working directory. Otherwise, you will find your image in the "ascii_images" folder, again, created in the current working directory.
 
 ## Examples:
 
