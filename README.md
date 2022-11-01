@@ -55,3 +55,16 @@ and we get:
 
 <img src="https://github.com/drpedrazas/ascii_vid/blob/master/Examples/joan_ascii_500.jpeg" width="400">
 
+We have a similar situation with video. Imagine we have the video pepefrg-4.mp4:
+
+<img src="https://github.com/drpedrazas/ascii_vid/blob/master/pepefrg-4.gif" width="200">
+
+We proceed like this:
+
+```
+ascii.py -cols 45 --video -fps 24 pepefrg-4.mp4 pepefrg-4_ascii
+```
+
+We get:
+
+<img src="https://github.com/drpedrazas/ascii_vid/blob/master/ezgif-1-1df2fd1e17.gif" width="200">
