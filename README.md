@@ -28,9 +28,13 @@ optional arguments:
 
 ## Examples:
 
-Suppose we have this image:
+Suppose we have this image called joan.jpg:
 
-![alt text](https://github.com/drpedrazas/ascii_vid/blob/master/joan.jpg | width=100)
+
+
+<img src="https://github.com/drpedrazas/ascii_vid/blob/master/joan.jpg" width="400">
+
+
 
 If we want to make it into ascii art, we just run:
 
@@ -39,7 +43,7 @@ python3 -cols 100 joan.jpg joan_ascii
 ```
 We get this:
 
-![alt text](https://github.com/drpedrazas/ascii_vid/blob/master/Examples/joan_ascii_100.jpeg | width=100)
+<img src="https://github.com/drpedrazas/ascii_vid/blob/master/Examples/joan_ascii_100.jpeg" width="400">
 
 If you want a more detailed image you can always increase de -cols parameter, like this:
 
@@ -49,5 +53,5 @@ python3 -cols 500 joan.jpg joan_ascii
 
 and we get:
 
-![alt text](https://github.com/drpedrazas/ascii_vid/blob/master/Examples/joan_ascii_500.jpeg | width=100)
+<img src="https://github.com/drpedrazas/ascii_vid/blob/master/Examples/joan_ascii_500.jpeg" width="400">
 
