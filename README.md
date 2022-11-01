@@ -30,6 +30,8 @@ optional arguments:
 
 Suppose we have this image:
 
+![alt text](https://github.com/drpedrazas/ascii_vid/blob/master/sawa.jpg)
+
 If we want to make it into ascii art, we just run:
 
 ```
@@ -37,4 +39,15 @@ python3 -cols 100 sawa.jpg sawa_ascii
 ```
 We get this:
 
+![alt text](https://github.com/drpedrazas/ascii_vid/blob/master/Examples/sawa_ascii_100.jpeg)
+
+If you want a more detailed image you can always increase de -cols parameter, like this:
+
+```
+python3 -cols 500 sawa.jpg sawa_ascii
+```
+
+and we get:
+
+![alt text](https://github.com/drpedrazas/ascii_vid/blob/master/Examples/sawa_ascii_500.jpeg)
 
