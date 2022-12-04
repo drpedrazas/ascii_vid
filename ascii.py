@@ -3,7 +3,7 @@ import sys, os, argparse
 import shutil
 from threading import Thread
 import time
-
+from pathlib import Path
 
 import numpy as np
 from PIL import Image
@@ -271,6 +271,17 @@ def main():
     parser.add_argument("file_name", help="Image or video you want to convert", type=str)
     parser.add_argument("name", help="Name of your project", type=str)
     args = parser.parse_args()
+    home_path = str(Path.home())
+    current_directory = os.getcwd()
+    initial = os.getcwd()
+    while current_directory != home_path:
+        os.chdir("..")
+        current_directory = os.getcwd()
+    if not os.path.isdir("ascii"):
+        os.mkdir("ascii")
+        os.mkdir("ascii/video")
+        os.mkdir("ascii/image")
+    os.chdir(initial)
     print("Processing...", end='\r')
     if args.video:
         if not os.path.isdir("out"):
@@ -288,6 +299,14 @@ def main():
                 to_ascii_vid(args.file_name, args.name, fps=args.fps)
         else:
             to_ascii_vid(args.file_name, args.name, args.cols, args.fps)
+        shutil.rmtree(args.name + "_frames")
+        shutil.rmtree(args.name + "_ascii_frames")
+        current_directory = os.getcwd()
+        while current_directory != home_path:
+            os.chdir("..")
+            current_directory = os.getcwd()
+        shutil.move(initial + "/out/" + args.name + "_ascii.mp4", "ascii/video")
+        shutil.rmtree(initial+"/out")
     else:
         if not os.path.isdir("ascii_images"):
             os.mkdir("ascii_images")
@@ -295,6 +314,12 @@ def main():
             ascii_image(args.file_name, args.name, args.cols)
         else:
             ascii_image(args.file_name, args.name, args.cols)
+        current_directory = os.getcwd()
+        while current_directory != home_path:
+            os.chdir("..")
+            current_directory = os.getcwd()
+        shutil.move(initial + "/ascii_images/" + args.name + ".jpeg", "ascii/image")
+        shutil.rmtree(initial + "/ascii_images")
 
 
 if __name__ == '__main__':
