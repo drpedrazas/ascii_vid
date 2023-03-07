@@ -1,13 +1,13 @@
 # ascii_vid
 ## The script you never knew you wanted:
 
-Converting a normal image into ascii art is one of the first projects a would be programmer tackles. As charming as it is, I always found it a little limiting. After all: if images, why not video? This program converts video to ascii. It can be executed with a plethora of options so that you determine how detailed or fluent the final product is. 
+Converting a normal image into ascii art is one of the first projects a would be programmer tackles. As charming as it is, I always found it a little limited in it's scope. After all: if images, why not video? This program converts video to ascii. It can be executed with a plethora of options so that you determine how detailed or fluent the final product is. Here I expose a brief introduction which pertains to this very subject. 
 
 ## How to use it:
 
 1. Clone this repo
 2. Put the video you want to convert in the same directory as ascii.py
-3. Run ``` python3 ascii.py -h ``` to see your options. You should see this:
+3. Run ``` python3 ascii.py -h ``` to see your options. It should look like this:
 ```
 $ python3 ascii.py -h
 usage: ascii.py [-h] [-cols COLS] [--video] [-fps FPS] file_name name
@@ -24,7 +24,7 @@ optional arguments:
   --video     Is your project a video?
   -fps FPS    fps for your video
 ```
-4. After deciding what you want to do, run your command. If your project is a video, your product will be droped inside an "out" directory created automatically in the current working directory. Otherwise, you will find your image in the "ascii_images" folder, again, created in the current working directory.
+4. After deciding what you want to do, run your command. If your project is a video the output will be droped inside an "out" directory created automatically inside the current working directory. Otherwise you will find your ascii image in the "ascii_images" folder, again, created in the current working directory automatically.
 
 ## Examples:
 
